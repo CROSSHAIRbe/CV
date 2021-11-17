@@ -1,0 +1,68 @@
+.row div {
+    border: solid 2px red;
+}
+h1 {
+    font-size:1.5rem;
+}
+h2 {
+    font-size: 1rem;
+}
+h3, .h3{
+    display: flex;
+    position: sticky;
+    top: 0px;
+    border: 1px solid;
+}
+p.align-middle {
+    margin-bottom: 0.2rem !important;
+}
+.br {   /*Dans la mesure ou <br> n'admet pas de mise en forme css, je créé un <p> avec une classe "br" dont je peux modifier la hauteur.*/
+    line-height: 0.5em;
+}
+.col-9 p {
+    margin-bottom: 0.2rem;
+    border: 1px solid;
+}
+.date {
+    text-align: center;
+    margin-bottom: 0.2rem;
+}
+.img-fluid {
+    max-height: 100%;
+}
+.dates {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.logo {
+    width: 15%;
+    max-width: 70px;
+}
+
+.colSpace {
+    /*max-width: 4%;
+    height: 100%;*/
+    object-fit: fill;
+}
+
+.colAside {
+    height: 100%;
+}
+.col-md-0-5 { /*crée un format de colonne bootstrap. Trouvé ici https://stackoverflow.com/a/46942755 */
+    /*make-column(0.5); le format est .make-taille-column(coefficient)*/
+    width: 4.1667%; /*https://stackoverflow.com/a/39574276*/
+}
+.col-3half { /*crée un format de colonne bootstrap*/
+    make-column(3.5); /*le format est .make-taille-column(coefficient)*/
+}
+/*
+.col {
+    border-left: dashed 3px blue;
+    border-right: dashed 3px blue;
+    width: 100px;
+}
+
+.colSeparator{
+    width: 15vw;
+}*/

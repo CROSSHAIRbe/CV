@@ -1,0 +1,125 @@
+* { /*déclaration de la palettte couleur générale du CV*/
+    --paletteDarkOrange : 231, 111, 81;
+    --paletteLightOrange : 233, 196, 106;
+    --paletteDarkGreen :  26, 46, 53;
+    --paletteGreen : 42, 157, 153;
+    --palettePurple : 65, 122, 120;
+   }
+
+   @font-face {    /*Déclaration personnalisée 'non-google'*/
+    font-family: 'Exo';
+    src: url('../includes/Exo-Italic-VariableFont_wght.ttf');
+  }
+  @font-face {    /*Déclaration personnalisée 'non-google'*/
+    font-family: 'Eurostile';
+    src: url('../includes/EurostileExtended.ttf');
+  }
+  @font-face {    /*Déclaration personnalisée 'non-google'*/
+    font-family: 'Comfortaa';
+    src: url('../includes/Comfortaa-VariableFont_wght.ttf');
+  }
+
+h1 {
+    /* font-size:1.5rem; Application de class='fs-2' */
+}
+
+h2 {
+    /*font-size: 0.8rem; Application de class='fs-3' */
+    font-family: Exo;
+    font-style: italic;
+}
+
+h3, .h3, div h3.logo, .logo{
+    display: flex;
+    position: sticky;
+    top: 0px;
+    background: linear-gradient(to right, rgb(var(--paletteLightOrange)), rgba(255,255,255,0));
+    border-radius: 25px;
+    z-index: 10;
+    font-family: Eurostile;
+}
+div.h3 div h3.logo, .logo {
+    z-index: 1;
+}
+
+p.align-middle {
+    margin-bottom: 0.2rem;
+}
+
+.br {   /*Dans la mesure ou <br> n'admet pas de mise en forme css, je créé un <p> avec une classe "br" dont je peux modifier la hauteur.*/
+    line-height: 0.5em;
+}
+
+.col-9 p {
+    margin-bottom: 0.2rem;
+}
+
+.date {
+    text-align: center;
+    margin-bottom: 0.2rem;
+}
+
+.dates {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.img-fluid {
+    max-height: 100%;
+}
+
+.logo {
+    width: 15%;
+    max-width: 70px;
+}
+
+.navigation {
+    z-index: 20;
+    position: fixed;
+    top: 28vw;
+    width: 25vw;
+    min-width: 114px;
+}
+
+@media (min-width: 768px) {
+    .navigation {
+    top: 20vw;
+    width: 17vw;
+    min-width: 114px;
+    }
+}
+
+.navigation nav.navbar {
+    padding: 0px;
+}
+
+.navigation nav ul.navbar-expand {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+div.navigation nav ul li a.nav-link {
+    background-color:rgb(var(--paletteDarkOrange));
+    border-radius: 15px;
+    color: rgb(var(--paletteDarkGreen));
+    font-size: max(1.4vw) min(30px);
+    padding: 5px;
+    margin: 1px;
+    box-shadow: inset 0 0 1em rgb(var(--paletteGreen));
+    text-shadow: rgb(var(--paletteLightOrange)) 1px 0px 5px;
+}
+
+/*.colSpace {
+    /*max-width: 4%;
+    height: 100%;
+    object-fit: fill;
+}*/
+
+.col-md-0-5 { /*crée un format de colonne bootstrap. Trouvé ici https://stackoverflow.com/a/46942755 */
+    /*make-column(0.5); le format est .make-taille-column(coefficient)*/
+    width: 4.1667%; /*https://stackoverflow.com/a/39574276*/
+}
+.col-3half { /*crée un format de colonne bootstrap*/
+    make-column(3.5); /*le format est .make-taille-column(coefficient)*/
+}
