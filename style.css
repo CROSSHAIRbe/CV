@@ -76,7 +76,7 @@ p.align-middle {
 
 .navigation {
     z-index: 20;
-    position: fixed;
+    position: sticky;
     top: 28vw;
     width: 25vw;
     min-width: 114px;
